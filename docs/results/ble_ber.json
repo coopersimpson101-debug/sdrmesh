@@ -1,0 +1,639 @@
+{
+ "meta": {
+  "generated": "2026-11-26",
+  "machine": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD | Windows 10",
+  "python": "3.12.10",
+  "numpy": "2.5.5",
+  "tool": "tools/run_montecarlo.py",
+  "seconds": 20.3,
+  "fs": "4e6 unless the row says fs=2e6",
+  "frame_bits": 1000,
+  "impairments": {
+   "awgn": {},
+   "cfo+sto": {
+    "cfo_hz": "120000.0",
+    "delay": "0.37",
+    "ppm": "40.0"
+   },
+   "multipath": {
+    "cfo_hz": "50000.0",
+    "delay": "0.37",
+    "taps": "([0.0, 1.0, 2.5], [0.85, 0.45j, -0.25])"
+   }
+  }
+ },
+ "results": [
+  {
+   "ebn0_db": 0.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 9871.0,
+   "ber": 0.49355,
+   "sync_miss": 16
+  },
+  {
+   "ebn0_db": 1.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 9167.0,
+   "ber": 0.45835,
+   "sync_miss": 10
+  },
+  {
+   "ebn0_db": 2.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 7686.0,
+   "ber": 0.3843,
+   "sync_miss": 9
+  },
+  {
+   "ebn0_db": 3.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 6516.0,
+   "ber": 0.3258,
+   "sync_miss": 3
+  },
+  {
+   "ebn0_db": 4.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 5238.0,
+   "ber": 0.2619,
+   "sync_miss": 2
+  },
+  {
+   "ebn0_db": 5.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 3384.0,
+   "ber": 0.1692,
+   "sync_miss": 2
+  },
+  {
+   "ebn0_db": 6.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 1794.0,
+   "ber": 0.0897,
+   "sync_miss": 1
+  },
+  {
+   "ebn0_db": 7.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 543.0,
+   "ber": 0.02715,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 8.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 315.0,
+   "ber": 0.01575,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 9.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 40000,
+   "errors": 320.0,
+   "ber": 0.008,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 10.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 60000,
+   "errors": 247.0,
+   "ber": 0.004116666666666667,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 11.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 120000,
+   "errors": 222.0,
+   "ber": 0.00185,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 12.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 320000,
+   "errors": 202.0,
+   "ber": 0.00063125,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 13.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 150.0,
+   "ber": 0.00025,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 14.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 27.0,
+   "ber": 4.5e-05,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 15.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 5.0,
+   "ber": 8.333333333333334e-06,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 16.0,
+   "impairment": "awgn",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 0.0,
+   "ber": 0.0,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 0.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 9664.0,
+   "ber": 0.4832,
+   "sync_miss": 13
+  },
+  {
+   "ebn0_db": 1.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 9690.0,
+   "ber": 0.4845,
+   "sync_miss": 12
+  },
+  {
+   "ebn0_db": 2.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 7946.0,
+   "ber": 0.3973,
+   "sync_miss": 9
+  },
+  {
+   "ebn0_db": 3.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 7076.0,
+   "ber": 0.3538,
+   "sync_miss": 6
+  },
+  {
+   "ebn0_db": 4.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 5838.0,
+   "ber": 0.2919,
+   "sync_miss": 4
+  },
+  {
+   "ebn0_db": 5.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 2560.0,
+   "ber": 0.128,
+   "sync_miss": 1
+  },
+  {
+   "ebn0_db": 6.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 1020.0,
+   "ber": 0.051,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 7.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 603.0,
+   "ber": 0.03015,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 8.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 322.0,
+   "ber": 0.0161,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 9.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 40000,
+   "errors": 344.0,
+   "ber": 0.0086,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 10.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 60000,
+   "errors": 261.0,
+   "ber": 0.00435,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 11.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 120000,
+   "errors": 208.0,
+   "ber": 0.0017333333333333333,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 12.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 280000,
+   "errors": 211.0,
+   "ber": 0.0007535714285714285,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 13.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 131.0,
+   "ber": 0.00021833333333333335,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 14.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 33.0,
+   "ber": 5.5e-05,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 15.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 3.0,
+   "ber": 5e-06,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 16.0,
+   "impairment": "cfo+sto",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 1.0,
+   "ber": 1.6666666666666667e-06,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 0.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 9952.0,
+   "ber": 0.4976,
+   "sync_miss": 11
+  },
+  {
+   "ebn0_db": 1.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 10020.0,
+   "ber": 0.501,
+   "sync_miss": 17
+  },
+  {
+   "ebn0_db": 2.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 9316.0,
+   "ber": 0.4658,
+   "sync_miss": 11
+  },
+  {
+   "ebn0_db": 3.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 8635.0,
+   "ber": 0.43175,
+   "sync_miss": 8
+  },
+  {
+   "ebn0_db": 4.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 8393.0,
+   "ber": 0.41965,
+   "sync_miss": 11
+  },
+  {
+   "ebn0_db": 5.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 6366.0,
+   "ber": 0.3183,
+   "sync_miss": 4
+  },
+  {
+   "ebn0_db": 6.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 4054.0,
+   "ber": 0.2027,
+   "sync_miss": 3
+  },
+  {
+   "ebn0_db": 7.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 2099.0,
+   "ber": 0.10495,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 8.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 1077.0,
+   "ber": 0.05385,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 9.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 1155.0,
+   "ber": 0.05775,
+   "sync_miss": 1
+  },
+  {
+   "ebn0_db": 10.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 420.0,
+   "ber": 0.021,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 11.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 20000,
+   "errors": 235.0,
+   "ber": 0.01175,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 12.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 60000,
+   "errors": 275.0,
+   "ber": 0.004583333333333333,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 13.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 120000,
+   "errors": 218.0,
+   "ber": 0.0018166666666666667,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 14.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 320000,
+   "errors": 206.0,
+   "ber": 0.00064375,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 15.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 118.0,
+   "ber": 0.00019666666666666666,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 16.0,
+   "impairment": "multipath",
+   "fs": 4000000.0,
+   "bits": 600000,
+   "errors": 24.0,
+   "ber": 4e-05,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 0.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 9436.0,
+   "ber": 0.4718,
+   "sync_miss": 12
+  },
+  {
+   "ebn0_db": 1.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 7583.0,
+   "ber": 0.37915,
+   "sync_miss": 7
+  },
+  {
+   "ebn0_db": 2.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 6472.0,
+   "ber": 0.3236,
+   "sync_miss": 6
+  },
+  {
+   "ebn0_db": 3.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 6018.0,
+   "ber": 0.3009,
+   "sync_miss": 6
+  },
+  {
+   "ebn0_db": 4.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 2482.0,
+   "ber": 0.1241,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 5.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 1539.0,
+   "ber": 0.07695,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 6.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 673.0,
+   "ber": 0.03365,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 7.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 20000,
+   "errors": 373.0,
+   "ber": 0.01865,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 8.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 40000,
+   "errors": 372.0,
+   "ber": 0.0093,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 9.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 60000,
+   "errors": 244.0,
+   "ber": 0.004066666666666666,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 10.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 120000,
+   "errors": 210.0,
+   "ber": 0.00175,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 11.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 400000,
+   "errors": 212.0,
+   "ber": 0.00053,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 12.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 600000,
+   "errors": 69.0,
+   "ber": 0.000115,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 13.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 600000,
+   "errors": 12.0,
+   "ber": 2e-05,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 14.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 600000,
+   "errors": 2.0,
+   "ber": 3.3333333333333333e-06,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 15.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 600000,
+   "errors": 0.0,
+   "ber": 0.0,
+   "sync_miss": 0
+  },
+  {
+   "ebn0_db": 16.0,
+   "impairment": "awgn",
+   "fs": 2000000.0,
+   "bits": 600000,
+   "errors": 0.0,
+   "ber": 0.0,
+   "sync_miss": 0
+  }
+ ]
+}

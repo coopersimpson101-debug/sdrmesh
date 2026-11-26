@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdrmesh"
+version = "0.1.0"
+description = "Software-defined BLE (LE 1M GFSK) and LoRa (CSS) physical layers, written from scratch, for the meshfind mesh"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "the sdrmesh authors" }]
+keywords = ["sdr", "ble", "bluetooth-low-energy", "lora", "chirp-spread-spectrum", "gfsk", "dsp", "hackrf", "plutosdr", "sigmf"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Ham Radio",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+meshfind = ["meshfind @ git+https://github.com/coopersimpson101-debug/meshfind"]
+pluto = ["pyadi-iio>=0.0.17"]
+plot = ["matplotlib>=3.7"]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/coopersimpson101-debug/sdrmesh"
+Repository = "https://github.com/coopersimpson101-debug/sdrmesh"
+Issues = "https://github.com/coopersimpson101-debug/sdrmesh/issues"
+Changelog = "https://github.com/coopersimpson101-debug/sdrmesh/blob/main/CHANGELOG.md"
+
+[project.scripts]
+sdrmesh = "sdrmesh.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sdrmesh*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

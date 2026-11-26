@@ -1,0 +1,68 @@
+{
+ "meta": {
+  "generated": "2026-11-26",
+  "machine": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD | Windows 10",
+  "python": "3.12.10",
+  "numpy": "2.5.5",
+  "tool": "tools/run_montecarlo.py",
+  "seconds": 17.3,
+  "note": "meshfind adverts (37-byte PDU), CFO U(-150,150) kHz, delay U(0,4) samples, random lead; success = CRC ok and meshfind key recovered"
+ },
+ "results": [
+  {
+   "ebn0_db": 6.0,
+   "packets": 400,
+   "per": 1.0
+  },
+  {
+   "ebn0_db": 7.0,
+   "packets": 400,
+   "per": 1.0
+  },
+  {
+   "ebn0_db": 8.0,
+   "packets": 400,
+   "per": 0.9875
+  },
+  {
+   "ebn0_db": 9.0,
+   "packets": 400,
+   "per": 0.9
+  },
+  {
+   "ebn0_db": 10.0,
+   "packets": 400,
+   "per": 0.7
+  },
+  {
+   "ebn0_db": 11.0,
+   "packets": 400,
+   "per": 0.4375
+  },
+  {
+   "ebn0_db": 12.0,
+   "packets": 400,
+   "per": 0.15500000000000003
+  },
+  {
+   "ebn0_db": 13.0,
+   "packets": 400,
+   "per": 0.04249999999999998
+  },
+  {
+   "ebn0_db": 14.0,
+   "packets": 400,
+   "per": 0.007499999999999951
+  },
+  {
+   "ebn0_db": 15.0,
+   "packets": 400,
+   "per": 0.0
+  },
+  {
+   "ebn0_db": 16.0,
+   "packets": 400,
+   "per": 0.0
+  }
+ ]
+}

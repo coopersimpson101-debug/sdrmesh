@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / py${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: install (with meshfind from GitHub)
+        run: pip install -e ".[test,meshfind,plot]"
+      - name: unit + end-to-end tests
+        run: python -m pytest -q
+      - name: CLI smoke test (synthesise a capture, decode it from a file and from a pipe)
+        run: |
+          sdrmesh tx ble -o demo.cs8 --count 8 --ebn0 16
+          sdrmesh rx ble --source file --file demo.cs8 | tee rx.txt
+          test "$(grep -c 'meshfind H=' rx.txt)" -eq 8
+          cat demo.cs8 | sdrmesh rx ble --source stdin --json | grep -c meshfind
+          sdrmesh lora tx --sf 9 --text "ci" -o f.cf32
+          sdrmesh lora rx --sf 9 --file f.cf32 | grep "crc ok"
+          sdrmesh airtime --sf 12 --len 250
+      - name: quick Monte Carlo (smoke; results are not committed)
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        run: python tools/run_montecarlo.py --quick --jobs 4 --out results-quick
+      - name: figures and banner regenerate
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        run: |
+          python docs/assets/make_banner.py
+          python docs/assets/make_figures.py hero ber terminal
+      - name: README links resolve
+        if: matrix.os == 'ubuntu-latest'
+        run: python tools/check_links.py

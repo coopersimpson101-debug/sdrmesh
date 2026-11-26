@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "sdrmesh: software-defined BLE and LoRa physical layers for the meshfind mesh"
+version: 0.1.0
+date-released: 2026-11-26
+authors:
+  - name: "the sdrmesh authors"
+repository-code: "https://github.com/coopersimpson101-debug/sdrmesh"
+license: MIT
+abstract: >-
+  BLE LE 1M (GFSK) and LoRa (chirp spread spectrum) physical layers written from scratch in Python/NumPy:
+  modulators, channel selection, CFO/STO estimation, Gardner timing recovery, sync-word correlation,
+  de-whitening, CRC-24, LoRa Gray mapping, diagonal interleaving, Hamming FEC, header and CRC, with an
+  AWGN/CFO/timing/multipath channel model, Monte Carlo BER/PER against theory, SigMF/HackRF/PlutoSDR I/O and a
+  streaming receiver that decodes meshfind tag adverts.
+keywords:
+  - software-defined radio
+  - Bluetooth Low Energy
+  - LoRa
+  - GFSK
+  - chirp spread spectrum
+  - digital signal processing
+  - HackRF
+  - PlutoSDR

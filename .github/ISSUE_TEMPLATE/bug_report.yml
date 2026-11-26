@@ -1,0 +1,48 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. If a capture is involved, please attach a short SigMF recording (a few MB at most) or say how to reproduce it with `sdrmesh tx`.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Commands, parameters (SF/BW/CR, sample rate, channel) or a minimal script. Paste logs as text.
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where does it happen?
+      options:
+        - Simulation / tests
+        - Recorded capture (file)
+        - Live HackRF
+        - Live PlutoSDR
+        - Build / CI
+        - Documentation
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Area
+      placeholder: "BLE PHY / LoRa PHY / channel model / Monte Carlo / SDR I/O / CLI / link"
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "OS, Python and numpy versions, SDR model and firmware, sdrmesh commit"
+    validations:
+      required: true

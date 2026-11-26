@@ -1,0 +1,63 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to (re)build a release for"
+        required: true
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: sdist + wheel
+        run: pip install build && python -m build
+      - name: test the built wheel
+        run: |
+          pip install "$(ls dist/*.whl)[test,meshfind]"
+          python -m pytest -q
+      - name: demo captures (synthetic, and labelled as such in the SigMF metadata)
+        run: |
+          mkdir -p demo
+          sdrmesh tx ble -o demo/sdrmesh-meshfind-ch37-4Msps.sigmf-data --count 12 --ebn0 18
+          sdrmesh tx ble -o demo/sdrmesh-meshfind-ch37-4Msps-clean.cs8 --count 12 --no-noise
+          sdrmesh lora tx --sf 9 --text "meshfind over LoRa" -o demo/sdrmesh-lora-sf9-bw125-os4.cf32
+          tar -C demo -czf sdrmesh-demo-captures.tar.gz .
+          sha256sum dist/* sdrmesh-demo-captures.tar.gz > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-files
+          path: |
+            dist/*
+            sdrmesh-demo-captures.tar.gz
+            SHA256SUMS.txt
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-files
+          path: out
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          body_path: .github/release/${{ github.event.inputs.tag || github.ref_name }}.md
+          fail_on_unmatched_files: true
+          files: |
+            out/dist/*
+            out/sdrmesh-demo-captures.tar.gz
+            out/SHA256SUMS.txt

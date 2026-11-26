@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+
+# IQ captures and SigMF recordings are large: keep them out of git
+*.cs8
+*.cs16
+*.cf32
+*.cfile
+*.sigmf-data
+*.sigmf-meta
+!docs/assets/*.sigmf-meta
+
+# local Monte Carlo scratch output
+results-quick/
