@@ -13,10 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.event.inputs.tag || github.ref }}
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: sdist + wheel
@@ -33,7 +33,7 @@ jobs:
           sdrmesh lora tx --sf 9 --text "meshfind over LoRa" -o demo/sdrmesh-lora-sf9-bw125-os4.cf32
           tar -C demo -czf sdrmesh-demo-captures.tar.gz .
           sha256sum dist/* sdrmesh-demo-captures.tar.gz > SHA256SUMS.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: release-files
           path: |
@@ -45,14 +45,14 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.event.inputs.tag || github.ref }}
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: release-files
           path: out
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.event.inputs.tag || github.ref_name }}
           body_path: .github/release/${{ github.event.inputs.tag || github.ref_name }}.md
